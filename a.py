@@ -9,11 +9,6 @@ app=Flask(__name__)
 def hello():
     return 'from '+request.base_url
 
-# @app.route('/test',methods=['GET'])
-# def te():
-#     print('send successfull '+request.args.get('name')+' ')
-#     return 'test',200
-
 @app.route('/name',methods=['GET','POST','DELETE'])
 def name():
     with open('test.json') as json_file:
